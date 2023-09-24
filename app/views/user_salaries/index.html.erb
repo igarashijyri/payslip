@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>User salaries</h1>
+
+<div id="user_salaries">
+  <% @user_salaries.each do |user_salary| %>
+    <%= render user_salary %>
+    <p>
+      <%= link_to "Show this user salary", user_salary %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New user salary", new_user_salary_path %>

@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  month_total_salary: 1
+  deduction: 1
+  net_salary: 1
+  welfare_pension: 1
+  transportation_expense: 1
+  residential_tax: 1
+  health_insurance_fee: 1
+  overtime_pay: 1
+  late_night_overtime_pay: 1
+
+two:
+  month_total_salary: 1
+  deduction: 1
+  net_salary: 1
+  welfare_pension: 1
+  transportation_expense: 1
+  residential_tax: 1
+  health_insurance_fee: 1
+  overtime_pay: 1
+  late_night_overtime_pay: 1
