@@ -1,11 +1,15 @@
 class UserSalariesController < ApplicationController
   before_action :set_user_salary, only: %i[ show edit update destroy ]
 
+  # TODO: view側でモデルに紐づかないDate型フォームを生成する
+  # 送信されてきたパラメータとcurrent_user_idを元に検索処理をかける
+  # 検索結果をインスタンス変数に格納してshowアクションへリダイレクトさせる
   def index
-    @user_salaries = UserSalary.all
   end
 
   def show
+    user_id = current_user.id
+    @user_salaries = UserSalary.where(id: user_id)
   end
 
   def new
