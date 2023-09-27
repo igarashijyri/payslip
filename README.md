@@ -1,4 +1,4 @@
-◆給与明細管理アプリ
+◆給与明細管理アプリ  備忘録  
 
 ◆開発環境構築手順
   1. docker-compose build
@@ -23,3 +23,9 @@
 ◆試したいこと  
   ・ソルト化およびソルト値の管理  
   ・PDFダウンロード  
+  ・Rubocop
+
+◆命名規約  
+  ・Array => `xxx_list`  
+  ・Hash  => `xxx_map` もしくは `xxx_hash` もしくは `value_by_key`
+  ・ActiveRecordオブジェクト => 複数存在する場合は末尾に`s`をつけた複数形
