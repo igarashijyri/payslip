@@ -38,6 +38,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_24_063514) do
   end
 
   create_table "user_salaries", charset: "utf8mb4", force: :cascade do |t|
+    t.bigint "user_id"
     t.integer "month_total_salary", null: false
     t.integer "deduction", null: false
     t.integer "net_salary", null: false
@@ -47,8 +48,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_24_063514) do
     t.integer "health_insurance_fee", null: false
     t.integer "overtime_pay", null: false
     t.integer "late_night_overtime_pay", null: false
+    t.date "salary_month", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_user_salaries_on_user_id"
   end
 
   create_table "users", charset: "utf8mb4", force: :cascade do |t|
@@ -64,4 +67,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_24_063514) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "user_salaries", "users"
 end
