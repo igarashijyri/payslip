@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsTemplateApp</title>
+    <title>給与明細管理</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,11 +12,15 @@
 
   <body>
     <header>
-      <div class="header-box">
-        <a class="payslip" href="#">給与明細</a>
-        <a class="bonus" href="#">賞与明細</a>
-        <a class="tax_withholding" href="#">源泉徴収</a>
-      </div>
+      <% if user_signed_in? %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'logout-link' %>
+
+        <div class="header-box">
+          <a class="payslip" href="#">給与明細</a>
+          <a class="bonus" href="#">賞与明細</a>
+          <a class="tax_withholding" href="#">源泉徴収</a>
+        </div>
+      <% end %>
     </header>
 
     <%= yield %>
