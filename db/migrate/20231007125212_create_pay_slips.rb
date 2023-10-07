@@ -11,7 +11,7 @@ class CreatePaySlips < ActiveRecord::Migration[7.0]
       t.integer :health_insurance_fee,    null: false
       t.integer :overtime_pay,            null: false
       t.integer :late_night_overtime_pay, null: false
-      t.date    :salary_month,            null: false
+      t.string  :year_month,              null: false
 
       t.timestamps
     end

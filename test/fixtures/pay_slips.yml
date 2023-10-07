@@ -9,4 +9,4 @@ one:
   health_insurance_fee: 20000
   overtime_pay: 0
   late_night_overtime_pay: 0
-  salary_month: <%= Date.today %>
+  year_month: 2023-10
