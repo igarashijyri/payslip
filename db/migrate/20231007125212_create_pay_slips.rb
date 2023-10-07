@@ -1,6 +1,6 @@
-class CreateUserSalaries < ActiveRecord::Migration[7.0]
+class CreatePaySlips < ActiveRecord::Migration[7.0]
   def change
-    create_table :user_salaries do |t|
+    create_table :pay_slips do |t|
       t.references :user,                 foreign_key: true
       t.integer :month_total_salary,      null: false
       t.integer :deduction,               null: false

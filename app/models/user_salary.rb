@@ -1,2 +1,0 @@
-class UserSalary < ApplicationRecord
-end

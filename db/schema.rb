@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_24_063514) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_07_125212) do
   create_table "active_admin_comments", charset: "utf8mb4", force: :cascade do |t|
     t.string "namespace"
     t.text "body"
@@ -37,7 +37,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_24_063514) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
-  create_table "user_salaries", charset: "utf8mb4", force: :cascade do |t|
+  create_table "pay_slips", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "user_id"
     t.integer "month_total_salary", null: false
     t.integer "deduction", null: false
@@ -51,7 +51,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_24_063514) do
     t.date "salary_month", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_user_salaries_on_user_id"
+    t.index ["user_id"], name: "index_pay_slips_on_user_id"
   end
 
   create_table "users", charset: "utf8mb4", force: :cascade do |t|
@@ -67,5 +67,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_24_063514) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "user_salaries", "users"
+  add_foreign_key "pay_slips", "users"
 end
