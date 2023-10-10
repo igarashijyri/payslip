@@ -3,6 +3,8 @@ class PaySlipsController < ApplicationController
   end
 
   # viewでテンプレートに変更が加えられないので原因調査する
+  # turbo falseにしたらCSRFトークン認証でエラー吐くようになった。
+  # Ajaxにするか普通のHTMLレスポンスにするかどうかを考える
   def monthly_detail
     year  = date_params["date(1i)"]
     month = date_params["date(2i)"]

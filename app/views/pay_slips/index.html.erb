@@ -1,6 +1,7 @@
 <h1>給与明細</h1>
 
-<%= form_with url: 'pay_slips/monthly_detail', method: :post do |f| %>
+<%#= form_with url: 'pay_slips/monthly_detail', data: { turbo: false } do |f| %>
+<%= form_with url: 'pay_slips/monthly_detail' do |f| %>
   <div class="form-group">
     <%= f.label :select_date, "日付を選択" %>
     <%= f.date_select :date, discard_day: true, use_month_numbers: true %>
